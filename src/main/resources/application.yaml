@@ -1,0 +1,4 @@
+api: 
+  spankie: 
+    url: http://localhost
+    from: "Hello World!"

@@ -1,0 +1,32 @@
+server: 
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+logging:
+  level:
+    com: off # stops logging of com.* packages
+
+spring: 
+  jpa: 
+    properties: 
+      hibernate:  
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate: 
+      ddl-auto: update # use this autocreate database if it is embeded
+      # show-sql: true
+  datasource: 
+    url: jdbc:postgresql://localhost:5432/kiosk2
+    username: postgres
+    password: postgres
+    initialization-mode: always
+    # initialize: true
+    # schema: classpath:/schema.sql # THE schema.sql file MUST BE PRESENT
+    continue-on-error: true
+
+# server.servlet.context-path=/api/v1
+
+api: 
+  spankie: 
+    url: http://localhost
+    from: "Hello World!"
